@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      titleTemplate: '%s | Bitwo TEST',
+      titleTemplate: '%s | Bitwo TEST #02',
       link: [
         { rel: 'icon', href: 'https://arweave.net/yR5W4hOdA5C-YUKGpXIWx4_yMgtV6G_ZFSn8AdUGdM4' },
       ],
