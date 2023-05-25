@@ -6,22 +6,20 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
       titleTemplate: '%s | Bitwo',
       link: [
-        { rel: 'apple-touch-icon', sizes: '180x180', href: '/favicon/apple-touch-icon.png' },
-        { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon/favicon-32x32.png' },
-        { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon/favicon-16x16.png' },
-        { rel: 'manifest', href: '/favicon/site.webmanifest' },
-        { rel: 'mask-icon', href: '/favicon/safari-pinned-tab.svg', color: '#22c55e' },
-        { rel: 'shortcut icon', href: '/favicon/favicon.ico' },
+        { rel: 'icon', href: 'https://arweave.net/yR5W4hOdA5C-YUKGpXIWx4_yMgtV6G_ZFSn8AdUGdM4' },
       ],
       meta: [
         { name: 'apple-mobile-web-app-title', content: 'Bitwo' },
         { name: 'application-name', content: 'Bitwo' },
         { name: 'msapplication-TileColor', content: '#22c55e' },
-        { name: 'msapplication-TileImage', content: '/favicon/mstile-144x144.png' },
-        { name: 'msapplication-config', content: '/favicon/browserconfig.xml' },
+        { name: 'msapplication-TileImage', content: 'https://arweave.net/yR5W4hOdA5C-YUKGpXIWx4_yMgtV6G_ZFSn8AdUGdM4' },
         { name: 'theme-color', content: '#22c55e' },
       ],
     },
+    baseURL: './',
+    buildAssetsDir: 'assets',
+    rootId: '__bitwo_links',
+    rootTag: 'body'
   },
   modules: [
     '@nuxtjs/tailwindcss',
@@ -31,7 +29,7 @@ export default defineNuxtConfig({
     viewer: false,
   },
   i18n: {
-    baseUrl: 'https://bitwo.io/tree/',
+    baseUrl: 'https://tree.bitwo.io',
     locales: [
       {
         code: 'us',
@@ -59,4 +57,4 @@ export default defineNuxtConfig({
       cookieCrossOrigin: true,
     },
   },
-})
+});
