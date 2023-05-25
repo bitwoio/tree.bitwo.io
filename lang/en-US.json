@@ -1,0 +1,20 @@
+{
+  "app": {
+    "author": "Bitwo.io",
+    "title": "Tree",
+    "description": "Innovative Software House: Tailored Solutions for Web, Hybrid Apps, and Growth"
+  },
+  "language": {
+    "name": "English"
+  },
+  "menu": {
+    "theme": "Theme"
+  },
+  "tree": {
+    "title": "Bitwo",
+    "description": "Innovative Software House: Tailored Solutions for Web, Hybrid Apps, and Growth"
+  },
+  "footer": {
+    "rights": "Copyright © { year } - All right reserved by { copyright }"
+  }
+}

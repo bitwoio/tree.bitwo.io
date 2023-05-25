@@ -1,0 +1,20 @@
+{
+  "app": {
+    "author": "Bitwo",
+    "title": "Arvore de Links",
+    "description": "Software House inovadora: Soluções personalizadas para Web, Apps Híbridos e Crescimento"
+  },
+  "language": {
+    "name": "Português"
+  },
+  "menu": {
+    "theme": "Tema"
+  },
+  "tree": {
+    "title": "Bitwo",
+    "description": "Software House inovadora: Soluções personalizadas para Web, Apps Híbridos e Crescimento"
+  },
+  "footer": {
+    "rights": "Copyright © { year } - Todos os direitos reservados por { copyright }"
+  }
+}
