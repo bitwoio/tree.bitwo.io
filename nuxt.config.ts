@@ -11,12 +11,12 @@ export default defineNuxtConfig({
       meta: [
         { name: 'apple-mobile-web-app-title', content: 'Bitwo' },
         { name: 'application-name', content: 'Bitwo' },
-        { name: 'msapplication-TileColor', content: '#22c55e' },
+        { name: 'msapplication-TileColor', content: '#B000E3' },
         { name: 'msapplication-TileImage', content: 'https://arweave.net/yR5W4hOdA5C-YUKGpXIWx4_yMgtV6G_ZFSn8AdUGdM4' },
-        { name: 'theme-color', content: '#22c55e' },
+        { name: 'theme-color', content: '#B000E3' },
       ],
     },
-    baseURL: './',
+    baseURL: '/',
     buildAssetsDir: 'assets',
     rootId: '__bitwo_links',
     rootTag: 'body'
@@ -29,7 +29,7 @@ export default defineNuxtConfig({
     viewer: false,
   },
   i18n: {
-    baseUrl: 'https://tree.bitwo.io',
+    baseUrl: 'https://bitwo.io',
     locales: [
       {
         code: 'us',

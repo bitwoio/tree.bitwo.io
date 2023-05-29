@@ -14,7 +14,7 @@
 
           <div class="mt-8 relative">
             <a :href="localePath('/')" target="_blank" class="avatar">
-              <div class="bg-white rounded-full p-1">
+              <div class="bg-logo rounded-full p-1">
                 <IconTheLogo class="h-20 w-full" />
               </div>
             </a>
@@ -44,9 +44,9 @@
           <div class="flex flex-col gap-4 m-6">
             <a v-for="link in links" :key="link.name" :href="link.url" target="_blank" class="btn btn-primary btn-wide rounded-lg gap-2" :disabled="link.disabled">
               <div class="avatar">
-                <div class="h-7 w-full rounded-full ring ring-accent ring-offset-primary ring-offset-2">
+                <div class="h-7 w-full rounded-full bg-white">
                   <img v-if="link.img" :src="link.img" class="scale-100 hover:scale-110" />
-                  <IconGetIcon v-else :icon="link.name" class="fill-current w-7 h-7" />
+                  <IconGetIcon v-else-if="link.icon" :icon="link.icon" class="fill-current w-7 h-7 p-1" />
                 </div>
               </div>
               {{ link.name }}

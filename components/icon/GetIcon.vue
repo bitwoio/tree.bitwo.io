@@ -4,7 +4,10 @@
   <IconSocialInstagramMedia v-else-if="'instagram' === Icon" class="scale-100 hover:scale-110" />
   <IconSocialLinkedinMedia v-else-if="'linkedin' === Icon" class="scale-100 hover:scale-110 text-[#0A66C2]" />
   <IconSocialTwitterMedia v-else-if="'twitter' === Icon" class="scale-100 hover:scale-110 text-[#1DA1F2]" />
-  <IconSocialExternalMedia v-else-if="'external' === Icon" class="scale-100 hover:scale-110" />
+  <IconSocialTelegramMedia v-else-if="'telegram' === Icon" class="scale-100 hover:scale-110 text-[#0088CC]" />
+  <IconSocialWhatsappMedia v-else-if="'whatsapp' === Icon" class="scale-100 hover:scale-110 text-[#25D366]" />
+  <IconTheLogo v-else-if="'bitwo' === Icon" class="scale-100 hover:scale-110 bg-logo" />
+  <IconSocialExternalMedia v-else class="scale-100 hover:scale-110" />
 </template>
 
 <script setup lang="ts">

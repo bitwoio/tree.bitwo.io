@@ -37,24 +37,9 @@ const themes: ThemesInterface[] = [
     order: 2
   },
   {
-    id: 'cupcake',
-    name: 'Cupcake',
-    order: 3
-  },
-  {
-    id: 'dracula',
-    name: 'Dracula',
-    order: 4
-  },
-  {
     id: 'cyberpunk',
     name: 'Cyberpunk',
     order: 5
-  },
-  {
-    id: 'bumblebee',
-    name: 'Bumblebee',
-    order: 6
   },
   {
     id: 'synthwave',
@@ -66,28 +51,37 @@ const themes: ThemesInterface[] = [
     name: 'Retro',
     order: 8
   },
-  {
-    id: 'lofi',
-    name: 'Lo-Fi',
-    order: 9
-  }
 ];
 
 const links: LinksInterface[] = [
   {
     name: 'bitwo.io',
     url: 'https://bitwo.io/',
-    img: 'https://arweave.net/yR5W4hOdA5C-YUKGpXIWx4_yMgtV6G_ZFSn8AdUGdM4',
+    icon: 'bitwo',
     disabled: true,
     order: 1
   },
   {
     name: 'Bitwo OSS',
     url: 'https://oss.bitwo.io/',
-    img: 'https://arweave.net/yR5W4hOdA5C-YUKGpXIWx4_yMgtV6G_ZFSn8AdUGdM4',
+    icon: 'bitwo',
     disabled: true,
     order: 2
   },
+  {
+    name: 'Whatsapp',
+    url: 'https://wa.me/message/VALVIWAF2AOLM1',
+    icon: 'whatsapp',
+    disabled: false,
+    order: 3
+  },
+  {
+    name: 'Telegram',
+    url: 'https://t.me/bitwoio',
+    icon: 'telegram',
+    disabled: false,
+    order: 4
+  }
 ];
 
 function sortSocialMedias (): SocialMediasInterface[] {

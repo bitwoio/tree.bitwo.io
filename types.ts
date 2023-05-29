@@ -14,7 +14,8 @@ interface ThemesInterface {
 interface LinksInterface {
   name: string
   url: string
-  img?: string
+  img?: string | null
+  icon?: string | null
   disabled?: boolean
   order: number
 }

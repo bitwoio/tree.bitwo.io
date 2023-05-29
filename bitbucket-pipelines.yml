@@ -1,0 +1,29 @@
+image: node:18.16.0
+
+pipelines:
+  branches:
+    main:
+      - parallel:
+        - step:
+            name: Install and Generate
+            script:
+              - yarn
+              - yarn run generate
+            artifacts:
+              - ".output/**"
+        - step:
+            name: Security Scan
+            script:
+              - pipe: atlassian/git-secrets-scan:0.5.1
+      - step:
+          name: Deploy to Production
+          deployment: production
+          script:
+            - ls -a
+            - pipe: atlassian/ftp-deploy:0.4.1
+              variables:
+                USER: $ftp_username
+                PASSWORD: $ftp_password
+                SERVER: $ftp_server
+                REMOTE_PATH: '/'
+                LOCAL_PATH: '.output/public/'

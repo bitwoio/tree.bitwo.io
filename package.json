@@ -1,5 +1,5 @@
 {
-  "name": "linktree-bitwo",
+  "name": "bitwo",
   "private": true,
   "scripts": {
     "build": "nuxt build",
