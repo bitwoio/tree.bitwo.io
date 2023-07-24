@@ -23,10 +23,15 @@ export default defineNuxtConfig({
     rootId: '__bitwo_links',
     rootTag: 'body'
   },
+
   modules: [
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/i18n'
+    '@nuxtjs/device',
+    '@dargmuesli/nuxt-cookie-control',
+    'nuxt-calendly',
+    '@nuxtjs/i18n',
   ],
+
   tailwindcss: {
     viewer: false,
     config: {
@@ -101,6 +106,7 @@ export default defineNuxtConfig({
       plugins: [require('daisyui')],
     }
   },
+
   i18n: {
     vueI18n: './i18n.config.ts',
     baseUrl: 'https://tree.bitwo.io/',
@@ -126,9 +132,27 @@ export default defineNuxtConfig({
     defaultLocale: 'us',
     detectBrowserLanguage: {
       useCookie: true,
-      cookieKey: 'bitwo_i18n_redirected',
+      cookieKey: 'tree_bitwo_i18n_redirected',
       redirectOn: 'root',
       cookieCrossOrigin: true,
     },
+  },
+
+  calendly: {
+    loadWidgetCSS: true,
+    loadWidgetCloseIconSvg: true
+  },
+
+  cookieControl: {
+    locales: [
+      'en',
+      'pt'
+    ],
+    isControlButtonEnabled: false,
+    isAcceptNecessaryButtonEnabled: false,
+  },
+
+  devtools: {
+    enabled: true,
   },
 });

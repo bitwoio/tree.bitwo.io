@@ -1,3 +1,62 @@
+<script setup lang="ts">
+const { t, locale } = useI18n();
+const localePath = useLocalePath();
+const socialMedias = useSocialMedias();
+const links = useLinks();
+const year = new Date().getFullYear();
+const author = t('app.author');
+const head = useLocaleHead({
+  addDirAttribute: true,
+  identifierAttribute: 'id',
+  addSeoAttributes: true
+});
+const cookieLocale = computed(() => {
+  switch (locale.value) {
+    case 'en':
+    case 'us':
+      return 'en';
+    case 'es':
+      return 'es';
+    case 'fr':
+      return 'fr';
+    case 'pt':
+    case 'br':
+      return 'pt';
+    default:
+      return 'en';
+  }
+});
+
+useHead({
+  title: t('app.title'),
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content: t('app.description'),
+    },
+  ],
+});
+
+useSeoMeta({
+  title: t('app.title'),
+  description: t('app.description'),
+  ogDescription: t('app.description'),
+  ogTitle: t('app.title'),
+  ogImage: '',
+  twitterCard: 'summary_large_image',
+});
+
+useServerSeoMeta({
+  title: t('app.title'),
+  description: t('app.description'),
+  ogDescription: t('app.description'),
+  ogTitle: t('app.title'),
+  ogImage: '',
+  twitterCard: 'summary_large_image',
+});
+</script>
+
 <template>
   <Html :lang="head.htmlAttrs?.lang" :dir="head.htmlAttrs?.dir">
       <Head>
@@ -10,6 +69,7 @@
         </template>
       </Head>
       <Body>
+        <CookieControl :locale="cookieLocale" />
         <div class="flex flex-col items-center justify-center container mx-auto">
 
           <div class="mt-8 relative">
@@ -62,46 +122,3 @@
       </Body>
   </Html>
 </template>
-
-<script setup lang="ts">
-const { t } = useI18n();
-const localePath = useLocalePath();
-const socialMedias = useSocialMedias();
-const links = useLinks();
-const year = new Date().getFullYear();
-const author = t('app.author');
-const head = useLocaleHead({
-  addDirAttribute: true,
-  identifierAttribute: 'id',
-  addSeoAttributes: true
-})
-
-useHead({
-  title: t('app.title'),
-  meta: [
-    {
-      hid: 'description',
-      name: 'description',
-      content: t('app.description'),
-    },
-  ],
-});
-
-useSeoMeta({
-  title: t('app.title'),
-  description: t('app.description'),
-  ogDescription: t('app.description'),
-  ogTitle: t('app.title'),
-  ogImage: '',
-  twitterCard: 'summary_large_image',
-});
-
-useServerSeoMeta({
-  title: t('app.title'),
-  description: t('app.description'),
-  ogDescription: t('app.description'),
-  ogTitle: t('app.title'),
-  ogImage: '',
-  twitterCard: 'summary_large_image',
-});
-</script>
