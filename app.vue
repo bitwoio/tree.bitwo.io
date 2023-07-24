@@ -26,6 +26,9 @@ const cookieLocale = computed(() => {
       return 'en';
   }
 });
+const options = {
+  url: 'https://calendly.com/bitwo/consultancy',
+}
 
 useHead({
   title: t('app.title'),
@@ -111,6 +114,23 @@ useServerSeoMeta({
               </div>
               {{ link.name }}
             </a>
+
+            <button class="btn btn-primary btn-wide rounded-lg gap-2" onclick="calendly.showModal()">
+              <div class="avatar">
+                <div class="h-7 w-full rounded-full bg-white">
+                  <IconGetIcon icon="calendly" class="fill-current w-7 h-7 p-1" />
+                </div>
+              </div>
+              Schedule a meeting
+            </button>
+            <dialog id="calendly" class="modal modal-bottom sm:modal-middle">
+              <form method="dialog" class="modal-box overflow-hidden">
+                <CalendlyInlineWidget v-bind="options" />
+              </form>
+              <form method="dialog" class="modal-backdrop">
+                <button>Close</button>
+              </form>
+            </dialog>
           </div>
 
           <footer class="footer footer-center p-4 m-12 text-base-content">

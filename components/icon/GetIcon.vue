@@ -6,6 +6,7 @@
   <IconSocialTwitterMedia v-else-if="'twitter' === Icon" class="scale-100 hover:scale-110 text-[#1DA1F2]" />
   <IconSocialTelegramMedia v-else-if="'telegram' === Icon" class="scale-100 hover:scale-110 text-[#0088CC]" />
   <IconSocialWhatsappMedia v-else-if="'whatsapp' === Icon" class="scale-100 hover:scale-110 text-[#25D366]" />
+  <IconSocialCalendlyMedia v-else-if="'calendly' === Icon" class="scale-100 hover:scale-110 text-[#006bff]" />
   <IconTheLogo v-else-if="'bitwo' === Icon" class="scale-100 hover:scale-110 bg-logo" />
   <IconSocialExternalMedia v-else class="scale-100 hover:scale-110" />
 </template>
