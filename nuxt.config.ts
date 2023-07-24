@@ -1,3 +1,5 @@
+const themes = require('daisyui/src/theming/themes');
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
@@ -27,9 +29,81 @@ export default defineNuxtConfig({
   ],
   tailwindcss: {
     viewer: false,
+    config: {
+      daisyui: {
+        themes: [
+          {
+            light: {
+              ...themes['[data-theme=light]'],
+              primary: '#B000E3',
+              ".fill-logo-primary": {
+                fill: '#B000E3'
+              },
+              ".fill-logo-secondary": {
+                fill: '#FFFFFF'
+              },
+              ".bg-logo": {
+                'background-color': '#020323'
+              }
+            },
+            dark: {
+              ...themes['[data-theme=dark]'],
+              primary: '#B000E3',
+              ".fill-logo-primary": {
+                fill: '#B000E3'
+              },
+              ".fill-logo-secondary": {
+                fill: '#020323'
+              },
+              ".bg-logo": {
+                'background-color': '#FFFFFF'
+              }
+            },
+            cyberpunk: {
+              ...themes['[data-theme=cyberpunk]'],
+              ".fill-logo-primary": {
+                fill: '#B000E3'
+              },
+              ".fill-logo-secondary": {
+                fill: '#020323'
+              },
+              ".bg-logo": {
+                'background-color': '#FFFFFF'
+              }
+            },
+            synthwave: {
+              ...themes['[data-theme=synthwave]'],
+              ".fill-logo-primary": {
+                fill: '#B000E3'
+              },
+              ".fill-logo-secondary": {
+                fill: '#020323'
+              },
+              ".bg-logo": {
+                'background-color': '#FFFFFF'
+              }
+            },
+            retro: {
+              ...themes['[data-theme=retro]'],
+              ".fill-logo-primary": {
+                fill: '#B000E3'
+              },
+              ".fill-logo-secondary": {
+                fill: '#020323'
+              },
+              ".bg-logo": {
+                'background-color': '#FFFFFF'
+              }
+            }
+          },
+        ]
+      },
+      plugins: [require('daisyui')],
+    }
   },
   i18n: {
-    baseUrl: 'https://bitwo.io',
+    vueI18n: './i18n.config.ts',
+    baseUrl: 'https://tree.bitwo.io/',
     locales: [
       {
         code: 'us',
@@ -48,7 +122,7 @@ export default defineNuxtConfig({
     ],
     lazy: true,
     langDir: 'lang',
-    strategy: 'prefix_except_default',
+    strategy: 'no_prefix',
     defaultLocale: 'us',
     detectBrowserLanguage: {
       useCookie: true,
