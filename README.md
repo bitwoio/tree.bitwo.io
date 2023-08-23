@@ -12,6 +12,7 @@
 * [Contributing](#contributing)
 * [License](#license)
 * [Feedback](#feedback)
+* [Support](#support)
 
 <h2 id="about"> 🌲 About tree.bitwo.io </h2>
 In our interconnected digital realm, with multiple platforms and channels, a singular reference point is crucial. tree.bitwo.io is the essential hub for all of Bitwo's digital touchpoints. More than just a link tree, it symbolises an organised digital presence.
@@ -108,6 +109,6 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 For any feedback, do reach out to us at [oss@bitwo.io](mailto:oss@bitwo.io).
 
-<h2> 💻 Support </h2>
+<h2 id="support"> 💻 Support </h2>
 
 For technical assistance, kindly contact [support@bitwo.io](mailto:support@bitwo.io).
